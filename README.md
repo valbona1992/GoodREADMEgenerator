@@ -1,9 +1,9 @@
 
-# <${answers.title}>
-${badge}
+# Mom 
+[license](https://img.shields.io/badge/license-undefined)
 
 ## Description
-${answers.description}
+
 
 ## Table of Contents 
   - [User Story](#userstory)
@@ -17,29 +17,30 @@ ${answers.description}
   - [Questions](#questions)
 
 ## User Story
-${answers.userstory}
+
 
 ## Demo Video 
-${answers.demovideo}
+[link]()
 
 ## Screenshots
-![Screenshot](${answers.screenshot})
+[Screenshot](undefined)
 
 ## Installation
-${answers.installation}
+
 
 ## Usage
-${answers.usage}
 
-## Contributers
-${answers.contributoers}
+
+## Contributors
+
 
 ## License
-License is ${answers.license} standard license.
+License is MIT standard license.
 
 ## Tests
-${answers.test}
+
 
 ## Questions
- GitHub: https://github.com/${answers.github}
- Email: ${answers.email}
+ GitHub: https://github.com/  <br/>
+ Email me with any questions:: 
+ 
