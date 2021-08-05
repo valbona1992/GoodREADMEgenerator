@@ -1,159 +1,11 @@
+// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-
-// function createMd(answers){
-
-//     let = response = ""
-//     switch (answers.license) {
-//         case 'Apache license 2.0':
-//             response = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-//             break;
-//         case 'MIT':
-//             response = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-//             break;
-//         case 'IBM':
-//             response = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
-//             break;
-//         case 'Open Data':
-//             response = '[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)'
-//             break;
-//         case 'None':
-//             response = ' '
-//             break;
-//         default:
-//             response = ' '
-//             break;
-//     }
+const generateMarkdown = require("./utils/generateMarkdown");
 
 
-//     let md = `
-//     # ${answers.title} 
-    
-//     ${response}
-    
-//     ## Description
-//     ${answers.description}
-    
-//     ## Table of Contents 
-//       - [User Story](#userstory)
-//       - [Demo Video](#demovideo)
-//       - [Screenshots](screenshots)
-//       - [Installation](#installation)
-//       - [Usage](#usage)
-//       - [License](#license)
-//       - [Contributors](#contributors)
-//       - [Tests](#tests)
-//       - [Questions](#questions)
-    
-//     ## User Story
-//     ${answers.userstory}
-    
-//     ## Demo Video 
-//     [link](${answers.demovideo})
-    
-//     ## Screenshots
-//     [Screenshot](${answers.screenshot})
-    
-//     ## Installation
-//     ${answers.installation}
-    
-//     ## Usage
-//     ${answers.usage}
-    
-//     ## Contributors
-//     ${answers.contributors}
-    
-//     ## License
-//     License is ${answers.license} standard license.
-    
-//     ## Tests
-//     ${answers.test}
-    
-//     ## Questions
-//      GitHub: https://github.com/${answers.github}  <br/>
-//      Email me with any questions:: ${answers.email}
-//      `;
-
-//      return md;
-    
-// }
-
-
-const createMd = (answers) => 
-    `
-# ${answers.title}  <br/>
-![License badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
-
-## Description
-${answers.description}
-
-## Table of Contents 
-  - [User Story](#userstory)
-  - [Demo Video](#demovideo)
-  - [Screenshots](screenshots)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributors](#contributors)
-  - [Tests](#tests)
-  - [Questions](#questions)
-
-## User Story
-${answers.userstory}
-
-## Demo Video 
-[link](${answers.demovideo})
-
-## Screenshots
-[Screenshot](${answers.screenshot})
-
-## Installation
-${answers.installation}
-
-## Usage
-${answers.usage}
-
-## Contributors
-${answers.contributors}
-
-## License
-License is ${answers.license} standard license.
-
-## Tests
-${answers.test}
-
-## Questions
- GitHub: https://github.com/${answers.github}  <br/>
- Email me with any questions: ${answers.email}
- `;
-
-
-// const badge = (license) => {
-//     switch (license) {
-//         case 'Apache license 2.0':
-//             response = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-//             break;
-//         case 'MIT':
-//             response = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-//             break;
-//         case 'IBM':
-//             response = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
-//             break;
-//         case 'Open Data':
-//             response = '[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)'
-//             break;
-//         case 'None':
-//             response = ' '
-//             break;
-//         default:
-//             response = ' '
-//             break;
-//     }
-//     return response;
-// };
-
-inquirer
-    .prompt([
+// TODO: Create an array of questions for user input
+const questions = [
         {
             type: 'input',
             message: 'What is the title of this project?',
@@ -222,11 +74,19 @@ inquirer
             name: "email",
             message: "What is your email address?",
         },
-    ])
-    .then((answers) => {
-        const generateMd = createMd(answers);
+    ];
+    
+    // TODO: Create a function to write README file
+    function writeToFile(filename, answers) {
+        fs.writeFileSync(filename, answers);
+    }
 
-        fs.writeFile('README.md', generateMd, (err) =>
-            err ? console.error(err) : console.log('Success!')
-        );
-    });
+    // TODO: Create a function to initialize app
+    function init() {
+        inquirer.prompt(questions).then(response => {
+            writeToFile("README.md", generateMarkdown(response))
+          });
+    }
+    
+    // Function call to initialize app
+    init();
