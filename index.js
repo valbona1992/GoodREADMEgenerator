@@ -25,18 +25,19 @@ const questions = [
             type: 'input',
             message: 'Enter the video demo link.',
             name: 'demovideo',
+            default: 'images/goodreadme.gif'
         },
         {
             type: 'input',
             message: 'Enter screenshots for the project.',
             name: 'firstscreenshot',
-            default: 'info'  // put link here 
+            default: 'images/Screenshot1.png'  
         },
         {
             type: 'input',
             message: 'Enter another screenshot for the project.',
             name: 'secondscreenshot',
-            default: 'info'  // put link here 
+            default: 'images/Screenshot2.png'  
         },
         {
             type: 'input',

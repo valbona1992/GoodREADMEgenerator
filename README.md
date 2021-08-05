@@ -1,9 +1,9 @@
 
-  # bob  <br/>
-  ![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)
+  #   <br/>
+  ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
   
   ## Description
-  mu
+  
   
   ## Table of Contents 
   
@@ -18,37 +18,40 @@
   * [Questions](#questions)
   
   ## User Story
-  be
+  
+  
   
   ## Demo Video 
-  [link](po)
+
+  🎥 The full movie file showing functionality of the application can be found here: [link](https://drive.google.com/drive/u/0/my-drive) <br/>
+
+ ![Screen Recording](images/goodreadme.gif)
   
   ## Screenshots
-  [Screenshot](undefined)
+  <img src="images/Screenshot1.png" alt="screenshot" /> <br/> <br/>
+  <img src="images/Screenshot2.png" alt="screenshot" />
   
   ## Installation
   ```
-  f
+  
   ```
   
   ## Usage
   ```
-  wd
-  ```
   
+  ```  
   ## Contributors
-  sd
   
   
-  ## License
-    ```
-    License is [BSD3](https://opensource.org/licenses/BSD-3-Clause) standard license
-    ```
+  ##License
+  
+    License is ![MIT](https://opensource.org/licenses/MIT) standard license.
+    
   
   ## Tests
-  dw
+  
   
   ## Questions
-   GitHub: https://github.com/sd  <br/>
-   Email me with any questions: sd
+   GitHub: https://github.com/  <br/>
+   Email me with any questions: 
    

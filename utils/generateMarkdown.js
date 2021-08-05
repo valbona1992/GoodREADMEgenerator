@@ -27,16 +27,16 @@ function renderLicenseLink(license) {
   if (license === "None"){
     return "";
   } else if (license === "MIT"){
-    return `[${license}](https://opensource.org/licenses/MIT)`
+    return `![${license}](https://opensource.org/licenses/MIT)`
   }
   else if (license === "Apache"){
-    return `[${license}](https://opensource.org/licenses/Apache-2.0)`
+    return `![${license}](https://opensource.org/licenses/Apache-2.0)`
   }
   else if (license === "GPL"){
-    return `[${license}](https://www.gnu.org/licenses/gpl-3.0)`
+    return `![${license}](https://www.gnu.org/licenses/gpl-3.0)`
   }
   else if (license === "BSD3"){
-    return `[${license}](https://opensource.org/licenses/BSD-3-Clause)`
+    return `![${license}](https://opensource.org/licenses/BSD-3-Clause)`
   }
 }
 
@@ -46,8 +46,8 @@ function renderLicenseSection(license) {
   if (license === "None"){
     return "";
   } else {
-    return `## License
-    License is ${renderLicenseLink(license)} standard license
+    return `
+    License is ${renderLicenseLink(license)} standard license.
     `;
     // Showing up as box 
   }
@@ -77,11 +77,16 @@ function generateMarkdown(answers) {
   ## User Story
   ${answers.userstory}
   
+  
   ## Demo Video 
-  [link](${answers.demovideo})
+
+  🎥 The full movie file showing functionality of the application can be found here: [link](https://drive.google.com/drive/u/0/my-drive) <br/>
+
+ ![Screen Recording](${answers.demovideo})
   
   ## Screenshots
-  [Screenshot](${answers.screenshot})
+  <img src="${answers.firstscreenshot}" alt="screenshot" /> <br/> <br/>
+  <img src="${answers.secondscreenshot}" alt="screenshot" />
   
   ## Installation
   \`\`\`
@@ -91,12 +96,12 @@ function generateMarkdown(answers) {
   ## Usage
   \`\`\`
   ${answers.usage}
-  \`\`\`
+  \`\`\`\
   
   ## Contributors
   ${answers.contributors}
   
-  
+  ##License
   ${renderLicenseSection(answers.license)}
   
   ## Tests
