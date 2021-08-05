@@ -7,15 +7,15 @@ function renderLicenseBadge(license) {
     return `![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)`;
     // [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
   }
-  else if (license === "APACHE 2.0"){
+  else if (license === "Apache"){
     return `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
     // [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   }
-  else if (license === "GPL 3.0"){
+  else if (license === "GPL"){
     return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-yellow.svg)`
     // [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://www.gnu.org/licenses/gpl-3.0)
   }
-  else if (license === "BSD 3"){
+  else if (license === "BSD3"){
     return `![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)`
     // [![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)](https://opensource.org/licenses/BSD-3-Clause)
   }
@@ -29,13 +29,13 @@ function renderLicenseLink(license) {
   } else if (license === "MIT"){
     return `[${license}](https://opensource.org/licenses/MIT)`
   }
-  else if (license === "APACHE 2.0"){
+  else if (license === "Apache"){
     return `[${license}](https://opensource.org/licenses/Apache-2.0)`
   }
-  else if (license === "GPL 3.0"){
+  else if (license === "GPL"){
     return `[${license}](https://www.gnu.org/licenses/gpl-3.0)`
   }
-  else if (license === "BSD 3"){
+  else if (license === "BSD3"){
     return `[${license}](https://opensource.org/licenses/BSD-3-Clause)`
   }
 }
@@ -47,7 +47,8 @@ function renderLicenseSection(license) {
     return "";
   } else {
     return `## License
-  ${renderLicenseLink(license)}`;
+    License is ${renderLicenseLink(license)} standard license
+    `;
     // Showing up as box 
   }
 }
@@ -63,15 +64,15 @@ function generateMarkdown(answers) {
   
   ## Table of Contents 
   
-    - [User Story](#userstory)
-    - [Demo Video](#demovideo)
-    - [Screenshots](#screenshots)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributors](#contributors)
-    - [Tests](#tests)
-    - [Questions](#questions)
+  * [User Story](#userstory)
+  * [Demo Video](#demovideo)
+  * [Screenshots](#screenshots)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributors](#contributors)
+  * [Tests](#tests)
+  * [Questions](#questions)
   
   ## User Story
   ${answers.userstory}
@@ -83,10 +84,14 @@ function generateMarkdown(answers) {
   [Screenshot](${answers.screenshot})
   
   ## Installation
+  \`\`\`
   ${answers.installation}
+  \`\`\`
   
   ## Usage
+  \`\`\`
   ${answers.usage}
+  \`\`\`
   
   ## Contributors
   ${answers.contributors}

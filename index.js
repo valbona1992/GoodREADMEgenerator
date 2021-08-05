@@ -62,7 +62,7 @@ const questions = [
             type: 'list',
             message: 'What license was used for this application?',
             name: 'license',
-            choices: ['None', 'Apache', 'MIT', 'IBM', 'Open Data'],
+            choices: ['None', 'Apache', 'MIT', 'BSD3', 'GPL'],
         },
         {
             type: "input",
