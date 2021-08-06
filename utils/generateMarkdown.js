@@ -79,7 +79,7 @@ function generateMarkdown(answers) {
   
   ## Demo Video 
 
-  🎥 The full video file showing functionality of the application can be found here: [link](https://drive.google.com/drive/u/0/my-drive) <br/>
+  🎥 The full video file showing functionality of the application can be found here: [link](https://drive.google.com/file/d/1lyQ0vlO9kzeGwtsFqQqWngqlJp-mvKJt/view) <br/>
 
  ![Screen Recording](${answers.demovideo})
   
