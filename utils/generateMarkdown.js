@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
     // [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
   }
   else if (license === "Apache"){
-    return `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
+    return `![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
     // [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   }
   else if (license === "GPL"){
@@ -16,7 +16,7 @@ function renderLicenseBadge(license) {
     // [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://www.gnu.org/licenses/gpl-3.0)
   }
   else if (license === "BSD3"){
-    return `![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)`
+    return `![License: BSD3](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)`
     // [![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)](https://opensource.org/licenses/BSD-3-Clause)
   }
 };
@@ -27,16 +27,16 @@ function renderLicenseLink(license) {
   if (license === "None"){
     return "";
   } else if (license === "MIT"){
-    return `![${license}](https://opensource.org/licenses/MIT)`
+    return `[MIT](https://opensource.org/licenses/MIT)`
   }
   else if (license === "Apache"){
-    return `![${license}](https://opensource.org/licenses/Apache-2.0)`
+    return `[Apache](https://opensource.org/licenses/Apache-2.0)`
   }
   else if (license === "GPL"){
-    return `![${license}](https://www.gnu.org/licenses/gpl-3.0)`
+    return `[GPL v3](https://www.gnu.org/licenses/gpl-3.0)`
   }
   else if (license === "BSD3"){
-    return `![${license}](https://opensource.org/licenses/BSD-3-Clause)`
+    return `[BSD3](https://opensource.org/licenses/BSD-3-Clause)`
   }
 }
 
@@ -46,8 +46,7 @@ function renderLicenseSection(license) {
   if (license === "None"){
     return "";
   } else {
-    return `
-    License is ${renderLicenseLink(license)} standard license.
+    return `License is ${renderLicenseLink(license)} standard license.
     `;
     // Showing up as box 
   }
@@ -80,7 +79,7 @@ function generateMarkdown(answers) {
   
   ## Demo Video 
 
-  🎥 The full movie file showing functionality of the application can be found here: [link](https://drive.google.com/drive/u/0/my-drive) <br/>
+  🎥 The full video file showing functionality of the application can be found here: [link](https://drive.google.com/drive/u/0/my-drive) <br/>
 
  ![Screen Recording](${answers.demovideo})
   
@@ -101,7 +100,7 @@ function generateMarkdown(answers) {
   ## Contributors
   ${answers.contributors}
   
-  ##License
+  ## License
   ${renderLicenseSection(answers.license)}
   
   ## Tests
