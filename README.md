@@ -1,9 +1,9 @@
 
-  #   <br/>
-  ![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+  # Good README Generator  <br/>
+  ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
   
   ## Description
-  
+  A command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
   
   ## Table of Contents 
   
@@ -18,12 +18,12 @@
   * [Questions](#questions)
   
   ## User Story
-  
+  AS A developer, I WANT a README generator, SO THAT I can quickly create a professional README for a new project
   
   
   ## Demo Video 
 
-  🎥 The full movie file showing functionality of the application can be found here: [link](https://drive.google.com/drive/u/0/my-drive) <br/>
+  🎥 The full video file showing functionality of the application can be found here: [link](https://drive.google.com/drive/u/0/my-drive) <br/>
 
  ![Screen Recording](images/goodreadme.gif)
   
@@ -33,24 +33,24 @@
   
   ## Installation
   ```
-  
+  Step 1: Run npm install. Step 2: Run node index.js
   ```
   
   ## Usage
   ```
-  
+  Run node index.js  to answers the questions, which will then create a README file. 
   ```  
   ## Contributors
-  
+  It is an open project and everyone can contribute. Please email requesting to be added as a contributor.
   
   ## License
-  License is [Apache](https://opensource.org/licenses/Apache-2.0) standard license.
+  License is [MIT](https://opensource.org/licenses/MIT) standard license.
     
   
   ## Tests
-  
+  Node index.js
   
   ## Questions
-   GitHub: https://github.com/  <br/>
-   Email me with any questions: 
+   GitHub: https://github.com/valbona1992  <br/>
+   Email me with any questions: valbona12@gmail.com
    
